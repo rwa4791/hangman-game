@@ -11,9 +11,21 @@
 var possiblePlays = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m","n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"];
 var possibleAnswers= ["avengers", "iron man", "hulk", "thor", "captain america", "black widow", "hawkeye"];
 var lives = 10;
+var wins = 0;
+var losses = 0;
+var messages = {
+            win: "You win!",
+            lose: "Game over!",
+            guessed: "already guessed, please try again...",
+            validLetter: "Please enter a letter from A-Z" };
+ var guess = [];
+
 
 document.onkeyup = function() {
 possiblePlays = event.key;
+if(possiblePlays === "avengers" || possiblePlays === "iron man" || possiblePlays === "hulk" || possiblePlays === "thor" || possiblePlays === "captain america" || possiblePlays === "black widow" || possiblePlays === "hawkeye"){
+
+
 
 
 var compPlay = possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
@@ -22,14 +34,21 @@ console.log("wins: " + wins)
 console.log("losses: " + losses)
 console.log(possiblePlays)
 console.log(possibleAnswers)
+document.getElementById("possiblePlays").innerHTML = "<h2>You chose: " + possiblePlays + "</h2>";
+
+}
+}
 
 
-
-
-
+function calculateWinner(possiblePlays,possibleAnswers){
 
 
 }
+
+
+
+
+
 </script>
 
 <h1>Avengers Themed Hangman</h1>
