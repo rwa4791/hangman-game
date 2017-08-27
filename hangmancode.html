@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hangman Project</title>
+	<link rel="stylesheet" type="text/css" href="assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+<script type="text/javascript">
+
+var possiblePlays = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m","n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"];
+var possibleAnswers= ["avengers", "iron man", "hulk", "thor", "captain america", "black widow", "hawkeye"];
+var lives = 10;
+
+document.onkeyup = function() {
+possiblePlays = event.key;
+
+
+var compPlay = possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
+calculateWinner(lives - possiblePlays);
+console.log("wins: " + wins)
+console.log("losses: " + losses)
+console.log(possiblePlays)
+console.log(possibleAnswers)
+
+
+
+
+
+
+
+}
+</script>
+
+<h1>Avengers Themed Hangman</h1>
+
+
+</body>
+</html>
